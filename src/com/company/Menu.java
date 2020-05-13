@@ -27,20 +27,16 @@ public class Menu {
                 }
                 case "ECHAP" -> {
                     System.out.println("Vous avez quitté le jeu");
-                    isReady = true;
+                    isReady = false;
                 }
                 default -> System.out.println("Veuillez entrer un choix valide");
             }
 
 
         }
-        if (isReady) {
-            Scanner startScanner = new Scanner(System.in);
-            System.out.print("Entrer 'START' pour commencer :");
 
-            String printStart = startScanner.nextLine().toUpperCase();
-            System.out.println("Le jeu a débuté");
-        }
+
+
         return playerChoice;
     }
 
@@ -58,12 +54,6 @@ public class Menu {
                 String nameChosen = inputName.nextLine();
                 W1.setName(nameChosen);
 
-                // Image
-                Scanner inputImg = new Scanner(System.in);
-                System.out.print("Rentrer une image pour ce valeureux Guerrier : ");
-                String imgChosen = inputImg.nextLine();
-                W1.setImg(imgChosen);
-
                 // Hp
                 Scanner inputHp = new Scanner(System.in);
                 System.out.print("Combien de points de vie souhaitez vous attribuer à votre Guerrier? : ");
@@ -75,6 +65,12 @@ public class Menu {
                 System.out.print("Combien de force souhaitez vous attribuer : ");
                 int strenghtChosen = inputStrenght.nextInt();
                 W1.setStrengh(strenghtChosen);
+                System.out.println("Vous avez un Guerrier nommé " + W1.getName() + " avec " + W1.getHp() + " de point de vie et " + W1.getStrengh() +" de force.");
+                Scanner startScanner = new Scanner(System.in);
+                System.out.print("Entrer 'START' pour commencer :");
+
+                String printStart = startScanner.nextLine().toUpperCase();
+                System.out.println("Le jeu a débuté");
                 return W1;
 
             }
@@ -88,12 +84,6 @@ public class Menu {
                 String nameChosen = inputName.nextLine();
                 M1.setName(nameChosen);
 
-                // Image
-                Scanner inputImg = new Scanner(System.in);
-                System.out.print("Rentrer une image pour ce 'valheureux' Magicien : ");
-                String imgChosen = inputImg.nextLine();
-                M1.setImg(imgChosen);
-
                 // Hp
                 Scanner inputHp = new Scanner(System.in);
                 System.out.print("Combien de points de vie souhaitez vous attribuer à votre Magicien? : ");
@@ -105,14 +95,26 @@ public class Menu {
                 System.out.print("Combien de force souhaitez vous attribuer : ");
                 int strenghtChosen = inputStrenght.nextInt();
                 M1.setStrengh(strenghtChosen);
+                System.out.println("Vous avez un Magicien nommé " + M1.getName() + " avec " + M1.getHp() + " de point de vie et " + M1.getStrengh() +" de force.");
+                Scanner startScanner = new Scanner(System.in);
+                System.out.print("Entrer 'START' pour commencer :");
+
+                String printStart = startScanner.nextLine().toUpperCase();
+                System.out.println("Le jeu a débuté");
                 return M1;
             }
             case "ECHAP" -> {
+                Scanner esc = new Scanner(System.in);
+                System.out.print("Si vous souhaitez quitter le jeu, entrez sur 'Echap' ");
                 System.out.println("Vous avez décidé de quitter le jeu");
                 System.exit(0);
             }
 
         }
         return choice;
+    }
+    public void modifyCharacter() {
+
+
     }
 }

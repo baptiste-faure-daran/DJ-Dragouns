@@ -4,6 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Menu start = new Menu();
         start.createCharacter();
+        Play go = new Play();
+        go.move();
+
+
     }
 }
 //public class Main {
