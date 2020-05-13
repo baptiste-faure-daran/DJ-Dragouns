@@ -1,35 +1,35 @@
-package com.company;
+package com.company.characters;
 
-public class MagicianClass {
+public class Warrior {
 
     private String name;
     private String img;
     private int hp;
     private int strenght;
 
-
-    public MagicianClass() {
+    public Warrior() {
         name = "Inconnu";
         img = "Inconnu";
-        hp = 3;
-        strenght = 8;
+        hp = 5;
+        strenght = 5;
     }
 
-    public MagicianClass(String nameChoose) {
+    public Warrior(String nameChoose) {
         name = nameChoose;
         img = "Inconnu";
-        hp = 3;
-        strenght = 8;
+        hp = 5;
+        strenght = 5;
     }
 
-    public MagicianClass(String nameChoose, String imgChoose, int hpChoose, int strenghtChoose) {
+    public Warrior(String nameChoose, String imgChoose, int hpChoose, int strenghtChoose) {
         name = nameChoose;
         img = imgChoose;
         hp = hpChoose;
         strenght = strenghtChoose;
     }
+
     public String toString() {
-        return "Nom du Magicien : " + this.getName() + " avec " + getImg() + " comme image et " + this.getHp() + " points de vie et " + this.getStrengh() + " de points de force";
+        return "Nom du Guerrier : " + this.getName() + " avec " + getImg() + " comme image et " + this.getHp() + " points de vie et " + this.getStrengh() + " de points de force";
     }
 
     public String getName() {

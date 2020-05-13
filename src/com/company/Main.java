@@ -2,10 +2,8 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-
-
         Menu start = new Menu();
-        start.chose();
+        start.createCharacter();
     }
 }
 //public class Main {
