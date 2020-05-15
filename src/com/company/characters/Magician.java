@@ -1,36 +1,22 @@
 package com.company.characters;
 
-public class Magician {
+import com.company.Hero;
 
-    private String name;
-    private String img;
-    private int hp;
-    private int strenght;
+public class Magician extends Hero {
 
 
-    public Magician() {
-        name = "Inconnu";
-        img = "Inconnu";
-        hp = 3;
-        strenght = 8;
-    }
 
-    public Magician(String nameChoose) {
-        name = nameChoose;
-        img = "Inconnu";
-        hp = 3;
-        strenght = 8;
-    }
 
-    public Magician(String nameChoose, String imgChoose, int hpChoose, int strenghtChoose) {
-        name = nameChoose;
-        img = imgChoose;
-        hp = hpChoose;
-        strenght = strenghtChoose;
-    }
+    public Magician() { super("Le super Magicien", 5, 3, 8, "Magicien"); }
+
+    public Magician(String name) { super(name, 5, 3, 8, "Magicien"); }
+
+    public Magician(String name, int hp, int strength, int attack, String type) { super(name, hp, strength, attack, "Magicien"); }
+
     public String toString() {
-        return "Nom du Magicien : " + this.getName() + " avec " + getImg() + " comme image et " + this.getHp() + " points de vie et " + this.getStrengh() + " de points de force";
+        return super.toString();
     }
+
 
     public String getName() {
         return name;
@@ -38,14 +24,6 @@ public class Magician {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
     }
 
     public int getHp() {
@@ -56,11 +34,10 @@ public class Magician {
         this.hp = hp;
     }
 
-    public int getStrengh() {
-        return strenght;
+    public int getStrength() {
+        return strength;
     }
 
-    public void setStrengh(int strengh) {
-        this.strenght = strengh;
-    }
+    public void setStrength(int strength) { this.strength = strength; }
+
 }

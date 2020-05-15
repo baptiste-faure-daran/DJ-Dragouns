@@ -1,22 +1,37 @@
 package com.company;
 
 public abstract class Hero {
+    protected String type;
     protected String name;
     protected int hp;
     protected int strength;
     protected int attack;
 
-    public Hero (String name, int hp, int strength, int attack){
+    public Hero(String name, int hp, int strength, int attack, String type) {
+        this.type = type;
         this.name = name;
         this.hp = hp;
         this.strength = strength;
         this.attack = attack;
     }
-    public Hero (String pickName) {
-        name = pickName;
-    }
-    public Hero(String pickName, int pickHp, int pickStrenght){
 
+    public String toString() {
+        return "[ You are a " + this.type
+                + ", and your name is : " + this.name
+                + " | Her.his current life is : " + this.hp
+                + " | Her.his current strength is : " + this.strength
+                + " ]";
+    }
+//    public Hero (String name) {
+//        this(name, 0,0,0);
+//    }
+//
+//    public Hero(){
+//        this("Unknown", 0, 0, 0);
+//    }
+
+    public String getType() {
+        return type;
     }
 
     public String getName() {
@@ -43,11 +58,4 @@ public abstract class Hero {
         this.strength = strength;
     }
 
-    public int getAttack() {
-        return attack;
-    }
-
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
 }

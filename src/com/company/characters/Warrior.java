@@ -1,35 +1,26 @@
 package com.company.characters;
 
-public class Warrior {
+import com.company.Hero;
 
-    private String name;
-    private String img;
-    private int hp;
-    private int strenght;
+public class Warrior extends Hero {
+
+
 
     public Warrior() {
-        name = "Inconnu";
-        img = "Inconnu";
-        hp = 5;
-        strenght = 5;
+        super("Le Super Guerrier", 5, 5, 10, "Guerrier");
     }
 
-    public Warrior(String nameChoose) {
-        name = nameChoose;
-        img = "Inconnu";
-        hp = 5;
-        strenght = 5;
+    public Warrior(String name) {
+        super(name, 5, 5, 5, "Guerrier");
     }
 
-    public Warrior(String nameChoose, String imgChoose, int hpChoose, int strenghtChoose) {
-        name = nameChoose;
-        img = imgChoose;
-        hp = hpChoose;
-        strenght = strenghtChoose;
+    public Warrior(String name, int hp, int strength, int attack, String type) {
+        super(name, hp, strength, attack, "Guerrier");
+
     }
 
     public String toString() {
-        return "Nom du Guerrier : " + this.getName() + " avec " + getImg() + " comme image et " + this.getHp() + " points de vie et " + this.getStrengh() + " de points de force";
+        return super.toString();
     }
 
     public String getName() {
@@ -40,14 +31,6 @@ public class Warrior {
         this.name = name;
     }
 
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
-
     public int getHp() {
         return hp;
     }
@@ -56,11 +39,12 @@ public class Warrior {
         this.hp = hp;
     }
 
-    public int getStrengh() {
-        return strenght;
+    public int getStrength() {
+        return strength;
     }
 
-    public void setStrengh(int strengh) {
-        this.strenght = strengh;
+    public void setStrength(int strength) {
+        this.strength = strength;
     }
+
 }
