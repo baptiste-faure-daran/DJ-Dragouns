@@ -1,27 +1,28 @@
 package com.company;
 
-import java.sql.SQLOutput;
+import com.company.characters.PersonnageHorsPlateauException;
+
 import java.util.Scanner;
 
 public class Play {
     private final int plate = 64;
 
-    public int randomNumber() {
+    public int diceThrow() {
         int dice = (int) (1 + 6 * Math.random());
 
         return dice;
 
     }
 
-    public void move() throws PersonnageHorsPlateauException{
+    public void move() throws PersonnageHorsPlateauException {
         String choice = "";
         int tour = 0;
         int position = 0;
 
         while (position < plate) {
-            int dice = randomNumber();
+            int dice = diceThrow();
             try {
-                Thread.sleep(1000);
+                Thread.sleep(800);
 
             } catch (InterruptedException e) {
                 e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.company;
+package com.company.characters;
 
 import javax.xml.transform.Source;
 import java.net.SocketOption;

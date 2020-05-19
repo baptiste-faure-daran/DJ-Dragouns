@@ -1,15 +1,21 @@
 package com.company;
 
+import com.company.characters.Hero;
+import com.company.characters.PersonnageHorsPlateauException;
+
 public class Main {
     public static void main(String[] args){
         Menu start = new Menu();
-        start.chose();
+        // 1. Si return alors il faut stocker le résultat
+        Hero h = start.chose();
+        System.out.println(h.toString());
         Play go = new Play();
         try {
         go.move();
         } catch (PersonnageHorsPlateauException e) {
             e.printStackTrace();
-        }
+        };
+
 
 
     }

@@ -1,43 +1,44 @@
 package com.company.characters;
 
-import com.company.Hero;
-
 public class Magician extends Hero {
 
+    // 2. Attention aux doubles déclarations d'attributs
+    // si tu declares minStrength ici -> il s'appelle this.minStrength
+    // si déclaré chez les parents -> il s'applelle super.minStrength
 
-
-
-    public Magician() { super("Le super Magicien", 5, 3, 8, "Magicien"); }
-
-    public Magician(String name) { super(name, 5, 3, 8, "Magicien"); }
-
-    public Magician(String name, int hp, int strength, int attack, String type) { super(name, hp, strength, attack, "Magicien"); }
-
-    public String toString() {
-        return super.toString();
+    // Si tu donnes pas de valeur aux attributs, ils prennent la valeur par défaut !
+    // pour int -> 0
+    // pour string -> null
+    // etc...
+    public Magician() {
+        super("Le super Magicien", 5, 8, 8, "Magicien");
+        super.maxHp = 6;
+        super.minHp = 3;
+        super.maxStrength = 15;
+        super.minStrength = 8;
     }
 
-
-    public String getName() {
-        return name;
+    public Magician(String name) {
+        super(name, 5, 3, 8, "Magicien");
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Magician(String name, int hp, int strength, int attack, String type) {
+        super(name, hp, strength, attack, "Magicien");
     }
 
-    public int getHp() {
-        return hp;
+    public int getMinLife() {
+        return minHp;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public int getMaxLife() {
+        return maxHp;
     }
 
-    public int getStrength() {
-        return strength;
+    public int getMinStrength() {
+        return minStrength;
     }
 
-    public void setStrength(int strength) { this.strength = strength; }
-
+    public int getMaxStrength() {
+        return maxStrength;
+    }
 }
