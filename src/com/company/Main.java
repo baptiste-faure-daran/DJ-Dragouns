@@ -2,6 +2,8 @@ package com.company;
 
 import com.company.characters.Hero;
 import com.company.characters.PersonnageHorsPlateauException;
+import com.company.engine.Menu;
+import com.company.engine.Play;
 
 public class Main {
     public static void main(String[] args){

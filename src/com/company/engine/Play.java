@@ -1,4 +1,4 @@
-package com.company;
+package com.company.engine;
 
 import com.company.characters.PersonnageHorsPlateauException;
 
@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Play {
     private final int plate = 64;
+    int playerPosition;
 
     public int diceThrow() {
         int dice = (int) (1 + 6 * Math.random());

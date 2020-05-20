@@ -13,11 +13,20 @@ public abstract class Hero {
     protected int maxStrength;
 
     public Hero(String name, int hp, int strength, int attack, String type) {
+        this(name, hp, strength, attack, type, 5, 10, 5, 10);
+    }
+
+    public Hero(String name, int hp, int strength, int attack, String type, int minHp, int maxHp, int minStrength, int maxStrength) {
         this.type = type;
         this.name = name;
         this.hp = hp;
         this.strength = strength;
         this.attack = attack;
+        this.minHp = minHp;
+        this.maxHp = maxHp;
+        this.minStrength = minStrength;
+        this.maxStrength = maxStrength;
+
     }
 
     public String toString() {
@@ -27,13 +36,6 @@ public abstract class Hero {
                 + " | Et avec " + this.strength + " points de force"
                 + " ]";
     }
-//    public Hero (String name) {
-//        this(name, 0,0,0);
-//    }
-//
-//    public Hero(){
-//        this("Unknown", 0, 0, 0);
-//    }
 
     public String getType() {
         return type;
@@ -56,7 +58,9 @@ public abstract class Hero {
             this.hp = this.maxHp;
         } else if (hp < this.minHp) {
             this.hp = this.minHp;
-        }else {this.hp = hp;}
+        } else {
+            this.hp = hp;
+        }
     }
 
     public int getStrength() {
@@ -68,7 +72,9 @@ public abstract class Hero {
             this.strength = this.maxStrength;
         } else if (strength < minStrength) {
             this.strength = this.minStrength;
-        } else {this.strength = strength;}
+        } else {
+            this.strength = strength;
+        }
     }
 
 }
