@@ -1,22 +1,19 @@
 package com.company.events.ennemies;
 
-public class Gobelins {
-    int hp = 6;
-    int strength =1;
+import com.company.characters.Hero;
 
-    public int getHp() {
-        return hp;
+public class Gobelins extends Vilains{
+
+    public Gobelins(String name, int hp, int strength) {
+        super(name, hp, strength);
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public Gobelins() {
+        super("Un vicieux Gobelin", 7,5);
     }
 
-    public int getStrength() {
-        return strength;
-    }
-
-    public void setStrength(int strength) {
-        this.strength = strength;
+    @Override
+    public void interract(Hero h) {
+        System.out.println("Nouvel habitant de la Moria laul");
     }
 }

@@ -22,6 +22,10 @@ public class Magician extends Hero {
         super(name, hp, strength, attack, "Magicien");
     }
 
+    /**
+     *
+     * @return
+     */
     public int getMinLife() {
         return minHp;
     }

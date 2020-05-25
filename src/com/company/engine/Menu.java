@@ -13,7 +13,7 @@ public class Menu {
 
     // Si tu instancies ton Hero ici et que tu veux l'utiliser ailleurs
     // pense à le retourner (mot clé return)
-    public Hero chose() {
+    public Hero choose() {
         // Je crée un Boolean de vérification que je détermine comme faux initialement
         boolean isReady = false;
         // Je détermine "playerChoice" comme un String vide

@@ -1,22 +1,18 @@
 package com.company.events.ennemies;
 
-public class Dragons {
-    int hp = 15;
-    int strength = 4;
+import com.company.characters.Hero;
 
-    public int getHp() {
-        return hp;
+public class Dragons extends Vilains {
+
+    public Dragons(String name, int hp, int strength) {
+        super(name, hp, strength);
+    }
+    public Dragons(){
+        super("Gros Dragon", 10, 10);
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
-
-    public int getStrength() {
-        return strength;
-    }
-
-    public void setStrength(int strength) {
-        this.strength = strength;
+    @Override
+    public void interract(Hero h) {
+        System.out.println("Miaou je suis un Dragon !");
     }
 }

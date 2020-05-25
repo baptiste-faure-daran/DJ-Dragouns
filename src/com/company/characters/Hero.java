@@ -1,16 +1,20 @@
 package com.company.characters;
 
+import com.company.events.bonus.weapons.Weapon;
+
 public abstract class Hero {
     protected String type;
     protected String name;
     protected int hp;
     protected int strength;
     protected int attack;
+    protected Weapon weapon;
 
     protected int minHp;
     protected int maxHp;
     protected int minStrength;
     protected int maxStrength;
+
 
     public Hero(String name, int hp, int strength, int attack, String type) {
         this(name, hp, strength, attack, type, 5, 10, 5, 10);
@@ -26,6 +30,7 @@ public abstract class Hero {
         this.maxHp = maxHp;
         this.minStrength = minStrength;
         this.maxStrength = maxStrength;
+
 
     }
 
@@ -75,6 +80,9 @@ public abstract class Hero {
         } else {
             this.strength = strength;
         }
+    }
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 
 }

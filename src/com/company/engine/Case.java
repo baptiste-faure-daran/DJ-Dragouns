@@ -1,9 +1,11 @@
 package com.company.engine;
 
-/**
- * TODO
- *
- */
-public interface Case {
+import com.company.characters.Hero;
 
+
+public interface Case {
+    /**
+     *
+     */
+    void interract (Hero h);
 }

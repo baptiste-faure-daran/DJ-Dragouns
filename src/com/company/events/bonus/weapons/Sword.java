@@ -1,16 +1,19 @@
 package com.company.events.bonus.weapons;
 
-public class Sword {
-    int strength;
-    public Sword(int strength) {
-        this.strength = strength;
+import com.company.characters.Hero;
+
+public class Sword extends Weapon {
+
+    public Sword(String name, int strength) {
+        super(name, strength);
     }
 
-    public int getStrength() {
-        return strength;
+    public Sword() {
+        super("Sword", 5);
     }
 
-    public void setStrength(int strength) {
-        this.strength = strength;
+    @Override
+    public void interract(Hero h) {
+        System.out.println("Une bien belle épée que voilà !");
     }
 }

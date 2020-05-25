@@ -9,11 +9,11 @@ public class Main {
     public static void main(String[] args){
         Menu start = new Menu();
         // 1. Si return alors il faut stocker le résultat
-        Hero h = start.chose();
+        Hero h = start.choose();
         System.out.println(h.toString());
-        Play go = new Play();
+        Play go = new Play(h);
         try {
-        go.move();
+        go.StartGame(h);
         } catch (PersonnageHorsPlateauException e) {
             e.printStackTrace();
         };
