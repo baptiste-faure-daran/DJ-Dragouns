@@ -68,6 +68,7 @@ public abstract class Hero {
         }
     }
 
+
     public int getStrength() {
         return strength;
     }

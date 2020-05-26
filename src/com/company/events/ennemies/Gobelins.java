@@ -9,7 +9,7 @@ public class Gobelins extends Vilains{
     }
 
     public Gobelins() {
-        super("Un vicieux Gobelin", 7,5);
+        super("Un vicieux Gobelin", 6,1);
     }
 
     @Override

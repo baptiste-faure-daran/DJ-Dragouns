@@ -18,7 +18,6 @@ import java.util.ArrayList;
 public class Plate {
 
 
-    int totalCase;
     ArrayList<Case> plate = new ArrayList<>();
 
 

@@ -14,5 +14,8 @@ public class MaxHpPotion extends Potions {
     @Override
     public void interract(Hero h) {
         System.out.println("Je suis une grosse potion, bois moi !");
+        h.setHp(this.hp + h.getHp());
+        System.out.println("Vous passez à " + h.getHp() + " de vie, n'est-ce pas formidable???");
+
     }
 }

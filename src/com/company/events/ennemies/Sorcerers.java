@@ -8,7 +8,7 @@ public class Sorcerers extends Vilains {
         super(name, hp, strength);
     }
     public Sorcerers() {
-        super("Un super Sorcier", 10, 7);
+        super("Un super Sorcier", 9, 2);
     }
 
     @Override

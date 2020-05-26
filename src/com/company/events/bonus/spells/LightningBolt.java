@@ -1,6 +1,7 @@
 package com.company.events.bonus.spells;
 
 import com.company.characters.Hero;
+import com.company.characters.Magician;
 
 public class LightningBolt extends Spells {
 
@@ -9,11 +10,17 @@ public class LightningBolt extends Spells {
     }
 
     public LightningBolt() {
-        super("Eclair qui pique", 5);
+        super("Eclair qui pique", 2);
     }
 
     @Override
     public void interract(Hero h) {
-        System.out.println("Pikachu GO !");
+        if (h instanceof Magician) {
+            System.out.println("What a damn Pikachu!");
+            h.setStrength(this.strength + h.getStrength());
+            System.out.println("Vous passez à " + h.getStrength() + " de force, n'est-ce pas incroyable????");
+        } else {
+            System.out.println("Eh non tu n'a pas le QI pour l'utiliser tocard");
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.company.events.ennemies;
 
+import com.company.characters.Hero;
 import com.company.engine.Case;
 
 public abstract class Vilains implements Case {
@@ -11,6 +12,12 @@ public abstract class Vilains implements Case {
         this.name = name;
         this.hp = hp;
         this.strength = strength;
+    }
+
+    @Override
+    public void interract(Hero h) {
+
+
     }
 
     public String toString() {
