@@ -3,7 +3,7 @@ package com.company;
 import com.company.characters.Hero;
 import com.company.characters.PersonnageHorsPlateauException;
 import com.company.engine.Menu;
-import com.company.engine.play;
+import com.company.engine.Play;
 
 public class Main {
     public static void main(String[] args){
@@ -11,7 +11,7 @@ public class Main {
         // 1. Si return alors il faut stocker le résultat
         Hero h = start.choose();
         System.out.println(h.toString());
-        play go = new play(h);
+        Play go = new Play(h);
         try {
         go.move(h);
         } catch (PersonnageHorsPlateauException e) {

@@ -17,7 +17,7 @@ public class Sword extends Weapon {
     public void interract(Hero h) {
         if (h instanceof Warrior) {
             System.out.println("Une bien belle épée que voilà !");
-            h.setStrength(this.strength + h.getStrength());
+            buff(h);
             System.out.println("Vous passez à " + h.getStrength() + " de force, n'est-ce pas incroyable????");
         } else {
             System.out.println("Eh non tu ne peux pas te servir de ça petite fille en robe");

@@ -14,5 +14,7 @@ public class Sorcerers extends Vilains {
     @Override
     public void interract(Hero h) {
         System.out.println("Gandalf le blanc ?");
+        attack(h);
     }
+
 }

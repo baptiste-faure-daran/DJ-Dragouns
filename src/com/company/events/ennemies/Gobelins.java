@@ -15,5 +15,6 @@ public class Gobelins extends Vilains{
     @Override
     public void interract(Hero h) {
         System.out.println("Nouvel habitant de la Moria laul");
+        attack(h);
     }
 }

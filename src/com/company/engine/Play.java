@@ -10,14 +10,14 @@ import com.company.events.bonus.weapons.Weapon;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class play {
+public class Play {
 
     private final int plate;
     private int position;
     private int tour;
     private Hero hero;
 
-    public play(Hero hero) {
+    public Play(Hero hero) {
         this.plate = 64;
         this.position = 0;
         this.tour = 0;
@@ -44,14 +44,17 @@ public class play {
         while (!jouer) {
             int dice = diceThrow();
             Scanner scan = new Scanner(System.in);
-            System.out.println("Si vous souhaitez relancer les dès : PRESS N");
+            System.out.println("Si vous souhaitez lancer les dès : PRESS N");
             String again = scan.nextLine().toUpperCase();
 
             if (again.equals("N")) {
                 System.out.println("Vous avez fait " + dice);
-                position += dice;
+                position = hero.getPosition() + dice;
+                hero.setPosition(position);
+//                position += dice;
                 System.out.println("Vous êtes sur la case n° " + position);
                 newPlate.getCase(this.position).interract(hero);
+                System.out.println("POSITION du héro :" +hero.getPosition());
 
                 tour++;
                 System.out.println("Au tour numéro : " + tour);
@@ -65,19 +68,6 @@ public class play {
             }
         }
     }
-//
-//    public void startGame(Hero hero) throws PersonnageHorsPlateauException {
-//        System.out.println("\n\n");
-//        while (this.position < this.plate) {
-//            System.out.println("Debut du tour numéro : " + this.tour);
-//            move();
-//            System.out.println("Vous êtes sur la case numéro : " + this.position);
-//
-//        }
-//        System.out.println("Vous avez Gagné !");
-//
-//
-//    }
 
     public void endGame(Hero hero) throws PersonnageHorsPlateauException {
         Scanner scan = new Scanner(System.in);

@@ -1,15 +1,19 @@
 package com.company.events.bonus.potions;
 
 
+import com.company.characters.Hero;
 import com.company.engine.Case;
 
-public abstract class Potions implements Case {
+public abstract class Potion implements Case {
     protected String name;
     protected int hp;
 
-    public Potions(String name, int hp) {
+    public Potion(String name, int hp) {
         this.name = name;
         this.hp = hp;
+    }
+    public void heal(Hero h) {
+        h.updateHp(this);
     }
 
     public String toString(){

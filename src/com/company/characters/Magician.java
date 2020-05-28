@@ -11,7 +11,7 @@ public class Magician extends Hero {
     // pour string -> null
     // etc...
     public Magician() {
-        super("Le super Magicien", 5, 8, 8, "Magicien", 6, 3, 15, 8);
+        super("Le super Magicien", 5, 8, 8, "Magicien", 6, 3, 8, 15);
     }
 
     public Magician(String name) {

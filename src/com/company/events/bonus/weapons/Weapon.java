@@ -1,5 +1,6 @@
 package com.company.events.bonus.weapons;
 
+import com.company.characters.Hero;
 import com.company.engine.Case;
 
 public abstract class Weapon implements Case {
@@ -9,6 +10,9 @@ public abstract class Weapon implements Case {
     public Weapon(String name, int strength) {
         this.name = name;
         this.strength = strength;
+    }
+    public void buff(Hero h){
+        h.updatePhysicalStrength(this);
     }
 
     public String toString() {

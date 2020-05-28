@@ -1,14 +1,18 @@
 package com.company.events.bonus.spells;
 
+import com.company.characters.Hero;
 import com.company.engine.Case;
 
-public abstract class Spells implements Case {
+public abstract class Spell implements Case {
     protected String name;
     protected int strength;
 
-    public Spells(String name,int strength) {
+    public Spell(String name, int strength) {
         this.name = name;
         this.strength = strength;
+    }
+    public void buff(Hero h){
+        h.updateMagicalStrength(this);
     }
 
     public String toString() {
@@ -21,5 +25,13 @@ public abstract class Spells implements Case {
 
     public void setStrength(int strength) {
         this.strength = strength;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public String getName() {
+        return name;
     }
 }

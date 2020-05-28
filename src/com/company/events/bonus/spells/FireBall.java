@@ -3,7 +3,7 @@ package com.company.events.bonus.spells;
 import com.company.characters.Hero;
 import com.company.characters.Magician;
 
-public class FireBall extends Spells {
+public class FireBall extends Spell {
 
     public FireBall(String name, int strength) {
         super(name, strength);
@@ -17,7 +17,7 @@ public class FireBall extends Spells {
     public void interract(Hero h) {
         if (h instanceof Magician) {
             System.out.println("What a damn Salamèche!");
-            h.setStrength(this.strength + h.getStrength());
+            buff(h);
             System.out.println("Vous passez à " + h.getStrength() + " de force, n'est-ce pas incroyable????");
         } else {
             System.out.println("Eh non tu n'a pas le QI pour l'utiliser tocard");

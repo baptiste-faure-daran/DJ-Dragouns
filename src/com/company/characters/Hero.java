@@ -1,6 +1,9 @@
 package com.company.characters;
 
+import com.company.events.bonus.potions.Potion;
+import com.company.events.bonus.spells.Spell;
 import com.company.events.bonus.weapons.Weapon;
+import com.company.events.ennemies.Vilains;
 
 public abstract class Hero {
     protected String type;
@@ -9,6 +12,7 @@ public abstract class Hero {
     protected int strength;
     protected int attack;
     protected Weapon weapon;
+    protected int position;
 
     protected int minHp;
     protected int maxHp;
@@ -42,6 +46,24 @@ public abstract class Hero {
                 + " ]";
     }
 
+    public void updateHp(Potion potion) {
+        if ((this.getHp() + potion.getHp())>15) {
+            System.out.println("Vous avez déjà trop de vie pour en reprendre gouja !");
+        } else {
+            this.setHpAfterAction(this.getHp() + potion.getHp());
+        }
+    }
+
+    public void updatePhysicalStrength(Weapon weapon) {
+        this.setStrength(this.getStrength() + weapon.getStrength());
+    }
+
+    public void updateMagicalStrength(Spell spell) {
+        this.setStrength(this.getStrength() + spell.getStrength());
+    }
+
+    public void fight(Vilains vilains) {}
+
     public String getType() {
         return type;
     }
@@ -67,7 +89,12 @@ public abstract class Hero {
             this.hp = hp;
         }
     }
+    public void setHpAfterAction(int hp) {
+        this.hp = hp;
+    }
+    public void setHpAfterHeal(int hp) {
 
+    }
 
     public int getStrength() {
         return strength;
@@ -82,8 +109,18 @@ public abstract class Hero {
             this.strength = strength;
         }
     }
+
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
 
 }
