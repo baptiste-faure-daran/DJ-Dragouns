@@ -64,7 +64,6 @@ public class Plate {
                 plate.add(new EmptyCase());
             }
         }
-
     }
 
     public Case getCase(int index) {

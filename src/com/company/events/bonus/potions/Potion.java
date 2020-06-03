@@ -12,6 +12,7 @@ public abstract class Potion implements Case {
         this.name = name;
         this.hp = hp;
     }
+
     public void heal(Hero h) {
         h.updateHp(this);
     }

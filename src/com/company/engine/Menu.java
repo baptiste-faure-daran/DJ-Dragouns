@@ -107,7 +107,5 @@ public class Menu {
 
         System.out.println("Le jeu a débuté");
 
-
     }
-
 }
